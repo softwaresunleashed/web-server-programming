@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="login.def" template="/layout.jsp">
+<put-attribute name="title"value=www.simplylogin.com/Login type="string"/>
+		<put-attribute name="header" value="/header.jsp"/>
+		<put-attribute name="menu" value="/mainmenu.jsp"/>
+		<put-attribute name="body"   value="/loginform.jsp"/>
+		<put-attribute name="footer" value="/footer.jsp"/>
+	</definition>
+	<definition name="manager.welcome.def" template="/layout.jsp">    
+		<put-attribute name="title" value="www.simplylogin.com/Login 
+		Successfull - Manger" type="string"/>
+		<put-attribute name="header" value="/header.jsp"/>
+		<put-attribute name="menu" value="/manager_menu.jsp"/>
+		<put-attribute name="body"   value="/body.jsp"/>
+		<put-attribute name="footer" value="/footer.jsp"/>
+	</definition> 
+	<definition name="clerk.welcome.def" extends="manager.welcome.def">    
+		<put-attribute name="title" value="www.simplylogin.com/Login 
+		Successfull - Clerk" type="string"/>
+		<put-attribute name="menu" value="/clerk_menu.jsp"/>
+	</definition>   
+	<definition name="manager.def" extends="manager.welcome.def">    
+		<put-attribute name="title" value="www.simplylogin.com - 
+		Manager" type="string"/>
+		<put-attribute name="body"   value="/actionbody.jsp"/>
+	</definition>  
+	<definition name="clerk.def" extends="manager.def">    
+<put-attribute name="title" value="www.simplylogin.com - Clerk" type="string"/>
+		<put-attribute name="menu" value="/clerk_menu.jsp"/>
+	</definition> 
+	<definition name="manager.def" extends="manager.welcome.def">
+		<put-attribute name="title" value="www.simplylogin.com - Manager" type="string"/>
+		<put-attribute name="body" value="/actionbody.jsp"/>
+	</definition>
+	<definition name="clerk.def" extends="manager.def">
+		<put-attribute name="title" value="www.simplylogin.com - Clerk" type="string"/>
+		<put-attribute name="menu" value="/clerk_menu.jsp"/>
+	</definition>
+
+</tiles-definitions>

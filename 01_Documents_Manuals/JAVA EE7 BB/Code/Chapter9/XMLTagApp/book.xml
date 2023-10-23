@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+<books>
+
+	<book>
+	<title>Java EE Black Book</title>
+	<description>The Best Book on Java EE </description>
+	<author>Kogent Learning Solutions Inc.</author>
+	</book>
+
+	<book>
+	<title>Java 7 Black Book</title>
+	<description>The Best Book on Java 7</description>
+	<author>Kogent Learning Solutions Inc.</author>
+	</book>
+
+</books>
+</xml-body>

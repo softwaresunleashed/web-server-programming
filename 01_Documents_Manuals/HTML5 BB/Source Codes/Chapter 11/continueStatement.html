@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>The continue Statement</TITLE>
+	</HEAD>
+	<BODY>
+		<H1>Using the continue statement</H1>
+		<SCRIPT type="text/javascript">
+			var count=0;
+			while(count<10)
+			{
+				++count;
+				if(count%2==0)
+				continue;
+			else
+				document.write("count="+count+"<BR/>");
+			}
+			document.write("while loop exited");
+		</SCRIPT>
+	</BODY>
+</HTML>

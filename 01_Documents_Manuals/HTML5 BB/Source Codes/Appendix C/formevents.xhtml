@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>XHTML example</title>
+<script type="text/javascript"> 
+function allowClear() { 
+    return window.confirm("You want to clear the form?"); 
+} 
+function allowSubmit() { 
+    return window.confirm("You want to mail this info?"); 
+} 
+</script> 
+
+</head> 
+
+<body> 
+<form method="get" enctype="text/plain" action="mailto:kls.com" onreset="return allowClear()" onsubmit="return allowSubmit()"> 
+<p>
+Enter your first name:
+<input type="text" name="firstName" id="firstName"/></p> 
+<p>
+Enter your last name:
+<input type="text" name="lastName" id="lastName"/></p>
+<p>
+Enter your address:
+<input type="text" name="address" id="address"/></p>
+<p>
+Enter your city:
+<input type="text" name="city" id="city" /></p>
+<p>
+Gender:
+<input type="radio" name="gender" id="gender1" checked="checked" />
+Male 
+<input type="radio" name="gender" id="gender2" />Female</p>
+<p>
+<input type="reset" /> 
+<input type="submit" />
+</p>
+</form> 
+</body> 
+
+</html>

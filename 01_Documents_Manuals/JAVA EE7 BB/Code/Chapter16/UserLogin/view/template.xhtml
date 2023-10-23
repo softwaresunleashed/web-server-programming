@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+	<head>
+		<title>Successful login page</title>
+	</head>
+	<body>
+
+		<div id="document">
+		<div id="header">
+		<div id="status">
+		You have successfully login as #{user.name}
+		| <s:link id="logout" action="#{identity.logout}" value="Logout"/>
+		</div>
+		</div>
+		<div id="container">
+			<div id="sidebar">
+			<ui:insert name="sidebar"/>
+		</div>
+		<div id="content">
+			<ui:insert name="content"/>
+			<ui:include src="conversations.xhtml" />
+		</div>
+		</div>
+	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:a="https://ajax4jsf.dev.java.net/ajax">
+	<head>
+		<title>Registration Page</title>
+	</head>
+	<body id="pgHome">
+		<div id="document">
+
+			<div id="container">
+
+			<div id="content">
+			<div class="section">
+			<h1>
+				Register
+			</h1>
+			</div>
+			<div class="section">
+
+			<h:form id="register">
+			<fieldset>
+
+			<s:validateAll>
+
+			<f:facet name="aroundInvalidField">
+			<s:span styleClass="errors" />
+			</f:facet>
+			<f:facet name="afterInvalidField">
+			<s:div styleClass="errors">
+			<s:message />
+			</s:div>
+			</f:facet>
+
+			<div class="entry">
+			<div class="label">
+			<h:outputLabel for="username">Username:</h:outputLabel>
+			</div>
+			<div class="input">
+			<s:decorate id="usernameDecorate">
+			<h:inputText id="username" value="#{user.username}"
+			required="true">
+			<a:support event="onblur" reRender="usernameDecorate" />
+			</h:inputText>
+			</s:decorate>
+			</div>
+			</div>
+
+			<div class="entry">
+			<div class="label">
+			<h:outputLabel for="name">Real Name:</h:outputLabel>
+			</div>
+			<div class="input">
+			<s:decorate id="nameDecorate">
+			<h:inputText id="name" value="#{user.name}" required="true">
+			<a:support event="onblur" reRender="nameDecorate" />
+			</h:inputText>
+			</s:decorate>
+			</div>
+			</div>
+
+			<div class="entry">
+			<div class="label">
+			<h:outputLabel for="password">Password:</h:outputLabel>
+			</div>
+			<div class="input">
+			<s:decorate>
+			<h:inputSecret id="password" value="#{user.password}"
+			required="true" />
+			</s:decorate>
+			</div>
+			</div>
+
+			<div class="entry">
+			<div class="label">
+			<h:outputLabel for="verify">Verify Password:</h:outputLabel>
+			</div>
+			<div class="input">
+			<s:decorate>
+			<h:inputSecret id="verify" value="#{register.verify}"
+			required="true" />
+			</s:decorate>
+			</div>
+			</div>
+
+			</s:validateAll>
+
+			<div class="entry errors">
+			<h:messages globalOnly="true" />
+			</div>
+
+			<div class="entry">
+			<div class="label">
+			&#160;
+			</div>
+			<div class="input">
+			<h:commandButton id="register" value="Register"
+			action="#{register.register}" />
+			&#160;
+			<s:button id="cancel" value="Cancel" view="/home.xhtml" />
+			</div>
+			</div>
+
+			</fieldset>
+			</h:form>
+
+			</div>
+			</div>
+			</div>
+
+		</div>
+	</body>
+</html>

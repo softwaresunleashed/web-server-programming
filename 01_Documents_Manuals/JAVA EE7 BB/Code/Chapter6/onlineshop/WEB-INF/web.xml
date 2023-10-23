@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+
+<context-param>
+        <param-name>custServEmail</param-name>
+        <param-value>pallavi.sharma@kogentindia.com</param-value>
+</context-param>
+
+<listener>
+	<listener-class>com.kogent.listeners.CartContextListener</listener-class>
+</listener>
+
+<servlet>
+	<servlet-name>Welcome</servlet-name>
+	<servlet-class>com.kogent.servlets.Welcome</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Welcome</servlet-name>
+	<url-pattern>/Welcome</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CartServlet</servlet-name>
+	<servlet-class>com.kogent.servlets.CartServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CartServlet</servlet-name>
+	<url-pattern>/cart</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CartNxtServlet</servlet-name>
+	<servlet-class>com.kogent.servlets.CartNxtServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+        <servlet-name>CartNxtServlet</servlet-name>
+        <url-pattern>/CartNxtServlet</url-pattern>
+</servlet-mapping>
+
+
+
+<welcome-file-list>
+	<welcome-file>
+		Welcome
+	</welcome-file>
+</welcome-file-list>
+</web-app>

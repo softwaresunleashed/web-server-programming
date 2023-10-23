@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-
+ 	instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee  
+ 	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<servlet>
+		<servlet-name>ts</servlet-name>
+		<servlet-class>com.kogent.servlets.TestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts</servlet-name>
+		<url-pattern>/testser/*</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>myres</web-resource-name>
+			<url-pattern>/testser/*</url-pattern>
+			
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>myrole1</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method> 
+		<form-login-config>
+			<form-login-page>/Login.jsp</form-login-page>
+			<form-error-page>/MyError.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+
+	<security-role>
+		<role-name>myrole1</role-name>
+	</security-role>
+
+	<welcome-file-list>
+		<welcome-file>Hello.html</welcome-file>
+	</welcome-file-list> 
+
+</web-app>

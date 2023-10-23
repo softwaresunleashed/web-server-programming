@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd ">
+<struts>
+	<package name="default" extends="tiles-default">
+		<action name="login" class="com.kogent.action.LoginAction">
+			<result name="error">/login.jsp</result>
+			<result name="input" type="tiles">login.def</result>
+			<result name="manager" type="tiles">manager.welcome.def</result>
+			<result name="clerk" type="tiles">clerk.welcome.def</result>
+		</action>
+		<action name="clerk">
+			<result type="tiles">clerk.def</result>
+		</action>
+		<action name="manager">
+			<result type="tiles">manager.def</result>
+		</action>
+		<action name="logoff">
+			<result type="tiles">login.def</result>
+		</action>
+
+	</package>
+</struts>

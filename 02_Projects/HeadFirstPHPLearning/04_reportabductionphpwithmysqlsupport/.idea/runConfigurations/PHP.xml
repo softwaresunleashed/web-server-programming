@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PHP" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="/Applications/MAMP/htdocs" port="8888">
+    <method />
+  </configuration>
+</component>

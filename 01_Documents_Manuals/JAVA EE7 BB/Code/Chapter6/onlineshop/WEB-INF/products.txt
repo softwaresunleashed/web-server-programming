@@ -1,0 +1,4 @@
+P001|EJB In Simple Steps|14.95
+P002|Java EE 7|12.95
+P003|Struts Black Book|14.95
+P004|C# Project Book|13.95

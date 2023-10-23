@@ -1,0 +1,7 @@
+
+Goto following link , and click on "Get Activation Code"...
+http://us.idea.lanyus.com/
+
+Activation code obtained needs to be copied to PHPStorm via Help->Register -> Activation Code
+
+
